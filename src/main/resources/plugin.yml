@@ -5,3 +5,7 @@ api-version: 1.15
 authors: [ BackdevHong ]
 description: 호박 숨바꼭질 플러그인입니다.
 website: https://github.com/backdevhong
+commands:
+  game:
+    description: 기본적인 게임 명령어입니다.
+
