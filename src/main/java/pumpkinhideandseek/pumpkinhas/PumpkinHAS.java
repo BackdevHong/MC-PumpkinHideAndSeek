@@ -13,6 +13,9 @@ public final class PumpkinHAS extends JavaPlugin {
     public void onEnable() {
         getLogger().info("호박 숨바꼭질 플러그인이 로딩되었습니다. 링딩동 링딩동 링디기디기 링딩동");
         getCommand("game").setExecutor(new gameCommand());
+        if (!getDataFolder().exists()) {
+            getDataFolder().mkdir();
+        }
         event();
     }
 

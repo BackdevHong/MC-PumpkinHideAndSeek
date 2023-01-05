@@ -15,7 +15,7 @@ import java.io.IOException;
 
 
 public class gameCommand implements CommandExecutor {
-    private final String message = format("&e&l[ &c&lPumpkin HideAndSeek &e&l]&f&l");
+    private final String message = format("&e&l[ &c&lPumpkin &e&l]&f&l");
     private final File fileDir = PumpkinHAS.getPlugin(PumpkinHAS.class).getDataFolder();
     private YamlConfiguration config;
     @Override
@@ -57,7 +57,7 @@ public class gameCommand implements CommandExecutor {
                                             player.sendMessage(message + " 이미 존재하는 월드입니다.");
                                         }
                                     } catch (IOException e) {
-                                        throw new RuntimeException(e);
+                                       throw new RuntimeException(e);
                                     }
                                 } else if (args[2].equalsIgnoreCase("check")) {
                                     worldCheckGui worldCheckGui = new worldCheckGui();
