@@ -4,11 +4,11 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import pumpkinhideandseek.pumpkinhas.PumpkinHAS;
-import pumpkinhideandseek.pumpkinhas.gui.worldCheckGui;
+import pumpkinhideandseek.pumpkinhas.gui.WorldCheckGui;
+import pumpkinhideandseek.pumpkinhas.gui.WorldRemoveGui;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,8 +60,11 @@ public class gameCommand implements CommandExecutor {
                                        throw new RuntimeException(e);
                                     }
                                 } else if (args[2].equalsIgnoreCase("check")) {
-                                    worldCheckGui worldCheckGui = new worldCheckGui();
+                                    WorldCheckGui worldCheckGui = new WorldCheckGui();
                                     worldCheckGui.open((Player) sender);
+                                } else if (args[2].equalsIgnoreCase("remove")) {
+                                    WorldRemoveGui worldRemoveGui = new WorldRemoveGui();
+                                    worldRemoveGui.open((Player) sender);
                                 }
                             }
                         }

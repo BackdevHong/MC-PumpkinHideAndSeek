@@ -9,9 +9,8 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import pumpkinhideandseek.pumpkinhas.PumpkinHAS;
 
 import java.io.File;
-import java.util.Locale;
 
-public class worldCheck implements Listener {
+public class WorldCheck implements Listener {
     private final File fileDir = PumpkinHAS.getPlugin(PumpkinHAS.class).getDataFolder();
     private YamlConfiguration config;
     @EventHandler

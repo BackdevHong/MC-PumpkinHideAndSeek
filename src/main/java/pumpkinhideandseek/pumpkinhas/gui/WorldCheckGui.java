@@ -10,11 +10,10 @@ import org.bukkit.material.MaterialData;
 import pumpkinhideandseek.pumpkinhas.PumpkinHAS;
 
 import java.io.File;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
-public class worldCheckGui {
+public class WorldCheckGui {
     private final File fileDir = PumpkinHAS.getPlugin(PumpkinHAS.class).getDataFolder();
     private final String[] fileList = fileDir.list();
     public void itemSet(String display, Material ID, int data, int stack, List<String> Lore, int loc, Inventory inv) {
@@ -27,7 +26,7 @@ public class worldCheckGui {
     }
     public void open(Player p) {
         int idx = 0;
-        Inventory inv = Bukkit.createInventory(null, 9, "worldCheck");
+        Inventory inv = Bukkit.createInventory(null, 27, "worldCheck");
         for(String filename : fileList) {
             int fileIndex = filename.lastIndexOf(".");
             String newFilename = filename.substring(0, fileIndex);

@@ -3,9 +3,8 @@ package pumpkinhideandseek.pumpkinhas;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import pumpkinhideandseek.pumpkinhas.command.game.gameCommand;
-import pumpkinhideandseek.pumpkinhas.event.worldCheck;
-
-import java.io.File;
+import pumpkinhideandseek.pumpkinhas.event.WorldCheck;
+import pumpkinhideandseek.pumpkinhas.event.WorldRemove;
 
 public final class PumpkinHAS extends JavaPlugin {
 
@@ -26,6 +25,7 @@ public final class PumpkinHAS extends JavaPlugin {
 
     public void event() {
         PluginManager pm = getServer().getPluginManager();
-        pm.registerEvents(new worldCheck(), this);
+        pm.registerEvents(new WorldCheck(), this);
+        pm.registerEvents(new WorldRemove(), this);
     }
 }
